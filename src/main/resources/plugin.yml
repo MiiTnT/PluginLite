@@ -1,0 +1,26 @@
+name: PluginLite
+version: 1.0
+main: fr.miitnt.pluginlite.Pluginlite
+api-version: 1.16
+authors: [ MiiTnT ]
+description: PluginLite permet de cacher certaines informations au joueurs
+website: www.multiffa.fun
+commands:
+  gmc:
+    description: Simple commande pour changer de gamemode
+  gms:
+    description: Simple commande pour changer de gamemode
+  gma:
+    description: Simple commande pour changer de gamemode
+  gmsp:
+    description: Simple commande pour changer de gamemode
+  litereload:
+    description: Reload PluginLite
+  day:
+    description: Mettre le jour
+  night:
+    description: Mettre la nuit
+  sun:
+    description: Mettre le beau temp
+  rain:
+    description: Mettre le mauvais temp

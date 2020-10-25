@@ -1,0 +1,12 @@
+#Plugin By MiiTnT, Ne pas modifier n'y vendre !#
+
+ServerName: §cServerName
+messages:
+  gamemode0: §7» §7Votre mode de jeu a bien été mis en §eSURVIE§7. #Donnera = ServerName + Gamemode0
+  gamemode1: §7» §7Votre mode de jeu a bien été mis en §eCREATIF§7. #Donnera = ServerName + Gamemode1
+  gamemode2: §7» §7Votre mode de jeu a bien été mis en §eADVENTURE§7. #Donnera = ServerName + Gamemode2
+  gamemode3: §7» §7Votre mode de jeu a bien été mis en §eSPECTATEUR§7. #Donnera = ServerName + Gamemode3
+  day: §7» §7Le jour se lève !
+  night: §7» §7La nuit tombe !
+  sun: §7» §7Le beau temp arrive !
+  rain: §7» §7Le mauvais temp arrive !
