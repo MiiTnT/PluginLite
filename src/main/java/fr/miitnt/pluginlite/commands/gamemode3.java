@@ -18,18 +18,18 @@ public class gamemode3 implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender,final Command cmd,final String msg,final String[] args) {
-        if(sender instanceof Player) {
+    public boolean onCommand(CommandSender sender, final Command cmd, final String msg, final String[] args) {
+        if (sender instanceof Player) {
             final Player p = (Player) sender;
-            if(p.isOp() || p.hasPermission("pluginlite.gamemode.spectator")){
-                if(args.length == 0) {
+            if (p.isOp() || p.hasPermission("pluginlite.gamemode.spectator")) {
+                if (args.length == 0) {
                     p.sendMessage(Objects.requireNonNull(main.getConfig().getString("ServerName")) + " " + Objects.requireNonNull(main.getConfig().getString("messages.gamemode3")));
                     p.setGameMode(GameMode.SPECTATOR);
                     p.setHealth(20);
                     p.setSaturation(20);
                     p.setFoodLevel(20);
                 }
-            }else {
+            } else {
                 p.sendMessage("§cErreur: §7Vous n'avez pas la permission.");
             }
         }

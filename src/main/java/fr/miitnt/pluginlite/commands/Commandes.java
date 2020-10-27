@@ -12,7 +12,9 @@ import java.util.List;
 
 public class Commandes implements Listener {
 
-    List<String> forbiddenCommands = Arrays.asList("plugins", "pl", "ver", "version");
+    List<String> forbiddenCommands = Arrays.asList("plugins", "pl", "ver", "version", "help", "?");
+
+    //Bloquer avec le tab
 
     public Commandes(Pluginlite pluginlite) {
     }

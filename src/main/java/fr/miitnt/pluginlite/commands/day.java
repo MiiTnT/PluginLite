@@ -18,7 +18,7 @@ public class day implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, final Command cmd, final String msg, final String[] args) {
-        for(World world : Bukkit.getServer().getWorlds()){
+        for (World world : Bukkit.getServer().getWorlds()) {
             world.setTime(0);
 
         }

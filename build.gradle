@@ -1,5 +1,3 @@
-
-
 apply plugin: 'java'
 
 group = 'fr.miitnt'
@@ -23,7 +21,6 @@ repositories {
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.16.3-R0.1-SNAPSHOT'
 }
-
 
 
 setLibsDirName("C:\\Users\\preve\\Desktop\\pls\\plugins")

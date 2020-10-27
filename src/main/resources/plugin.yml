@@ -14,13 +14,20 @@ commands:
     description: Simple commande pour changer de gamemode
   gmsp:
     description: Simple commande pour changer de gamemode
+  gm:
+    description: Simple commande pour changer de gamemode
   litereload:
     description: Reload PluginLite
+    permission: pluginlite.time.reload
   day:
     description: Mettre le jour
+    permission: pluginlite.time.day
   night:
     description: Mettre la nuit
+    permission: pluginlite.time.night
   sun:
     description: Mettre le beau temp
+    permission: pluginlite.time.sun
   rain:
     description: Mettre le mauvais temp
+    permission: pluginlite.time.rain

@@ -1,7 +1,6 @@
 package fr.miitnt.pluginlite;
 
 import fr.miitnt.pluginlite.commands.*;
-import fr.miitnt.pluginlite.commands.rain;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -22,10 +21,12 @@ public final class Pluginlite extends JavaPlugin {
         getCommand("night").setExecutor(new night(this));
         getCommand("sun").setExecutor(new time(this));
         getCommand("rain").setExecutor(new rain(this));
+        getCommand("gm").setExecutor(new gm(this));
+        getServer().getPluginManager().registerEvents(new EventListeners(this), this);
+
 
         saveDefaultConfig();
     }
-
 
 
     @Override

@@ -1,17 +1,15 @@
-fr/miitnt/pluginlite/Pluginlite.java
- fr.miitnt.pluginlite.Pluginlite
-fr/miitnt/pluginlite/commands/litereload.java
- fr.miitnt.pluginlite.commands.litereload
+fr/miitnt/pluginlite/commands/EventListeners.java
+ fr.miitnt.pluginlite.commands.EventListeners
+fr/miitnt/pluginlite/commands/rain.java
+ fr.miitnt.pluginlite.commands.rain
 fr/miitnt/pluginlite/commands/gamemode2.java
  fr.miitnt.pluginlite.commands.gamemode2
-fr/miitnt/pluginlite/commands/gamemode1.java
- fr.miitnt.pluginlite.commands.gamemode1
 fr/miitnt/pluginlite/commands/day.java
  fr.miitnt.pluginlite.commands.day
 fr/miitnt/pluginlite/commands/gamemode0.java
  fr.miitnt.pluginlite.commands.gamemode0
-fr/miitnt/pluginlite/rain.java
- fr.miitnt.pluginlite.commands.rain
+fr/miitnt/pluginlite/commands/gamemode1.java
+ fr.miitnt.pluginlite.commands.gamemode1
 fr/miitnt/pluginlite/commands/gamemode3.java
  fr.miitnt.pluginlite.commands.gamemode3
 fr/miitnt/pluginlite/commands/Commandes.java
@@ -20,3 +18,9 @@ fr/miitnt/pluginlite/commands/night.java
  fr.miitnt.pluginlite.commands.night
 fr/miitnt/pluginlite/commands/time.java
  fr.miitnt.pluginlite.commands.time
+fr/miitnt/pluginlite/commands/litereload.java
+ fr.miitnt.pluginlite.commands.litereload
+fr/miitnt/pluginlite/Pluginlite.java
+ fr.miitnt.pluginlite.Pluginlite
+fr/miitnt/pluginlite/commands/gm.java
+ fr.miitnt.pluginlite.commands.gm

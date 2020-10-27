@@ -1,12 +1,19 @@
 #Plugin By MiiTnT, Ne pas modifier n'y vendre !#
-
-ServerName: §cServerName
+#{PLAYER} = Joueur visé
+#{ARG} = Joueur dans la commande
+ServerName: "§cServerName"
 messages:
-  gamemode0: §7» §7Votre mode de jeu a bien été mis en §eSURVIE§7. #Donnera = ServerName + Gamemode0
-  gamemode1: §7» §7Votre mode de jeu a bien été mis en §eCREATIF§7. #Donnera = ServerName + Gamemode1
-  gamemode2: §7» §7Votre mode de jeu a bien été mis en §eADVENTURE§7. #Donnera = ServerName + Gamemode2
-  gamemode3: §7» §7Votre mode de jeu a bien été mis en §eSPECTATEUR§7. #Donnera = ServerName + Gamemode3
-  day: §7» §7Le jour se lève !
-  night: §7» §7La nuit tombe !
-  sun: §7» §7Le beau temp arrive !
-  rain: §7» §7Le mauvais temp arrive !
+  gamemode0: "§7» §7Votre mode de jeu a bien été mis en §eSURVIE§7." #Donnera = ServerName + Gamemode0
+  gamemode1: "§7» §7Votre mode de jeu a bien été mis en §eCREATIF§7. " #Donnera = ServerName + Gamemode1
+  gamemode2: "§7» §7Votre mode de jeu a bien été mis en §eADVENTURE§7." #Donnera = ServerName + Gamemode2
+  gamemode3: "§7» §7Votre mode de jeu a bien été mis en §eSPECTATEUR§7." #Donnera = ServerName + Gamemode3"
+  gamemode_error: "§7» §cErreur: §70,1,2,3."
+  gamemode_online_error: "§7» §cErreur: §7indiquez un joueur en ligne !"
+  gamemode_validation: "§7» §7Le mode de jeux de §e{ARG} §7a été modifié."
+  day: "§7» §7Le jour se lève !"
+  night: "§7» §7La nuit tombe !"
+  sun: "§7» §7Le beau temp arrive !"
+  rain: "§7» §7Le mauvais temp arrive !"
+  join_message: "§6§n{PLAYER}§r §7» A rejoint le serveur."
+  quit_message: "§c§n{PLAYER}§r §7» A quitté le serveur."
+

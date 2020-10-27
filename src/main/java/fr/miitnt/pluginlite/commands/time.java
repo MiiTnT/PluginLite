@@ -16,9 +16,10 @@ public class time implements CommandExecutor {
         this.main = pluginlite;
     }
 
+
     @Override
     public boolean onCommand(CommandSender sender, final Command cmd, final String msg, final String[] args) {
-        for(World world : Bukkit.getServer().getWorlds()){
+        for (World world : Bukkit.getServer().getWorlds()) {
             world.setStorm(false);
             world.setThundering(false);
 
