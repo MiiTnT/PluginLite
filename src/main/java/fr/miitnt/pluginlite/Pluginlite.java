@@ -22,6 +22,9 @@ public final class Pluginlite extends JavaPlugin {
         getCommand("sun").setExecutor(new time(this));
         getCommand("rain").setExecutor(new rain(this));
         getCommand("gm").setExecutor(new gm(this));
+        getCommand("craft").setExecutor(new craft());
+        getCommand("furnace").setExecutor(new furnace(this));
+        getCommand("setservername").setExecutor(new setServerName(this));
         getServer().getPluginManager().registerEvents(new EventListeners(this), this);
 
 

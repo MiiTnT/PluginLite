@@ -23,6 +23,29 @@ public class EventListeners implements Listener {
 
         if (message != null)
             event.setJoinMessage(message.replace("{PLAYER}", p.getDisplayName()));
+        
+        if(p.hasPermission("tab.prefix.joueur")){
+            p.setPlayerListName(ChatColor.DARK_GREEN + "{J} " + p.getName());
+        }
+        if(p.hasPermission("tab.prefix.guerrier")){
+            p.setPlayerListName(ChatColor.RED + "{G} " + p.getName());
+        }
+        if(p.hasPermission("tab.prefix.admin")){
+            p.setPlayerListName(ChatColor.DARK_RED + "{A} " + p.getName());
+        }
+        if(p.hasPermission("tab.prefix.moderateur")){
+            p.setPlayerListName(ChatColor.DARK_GREEN + "{M} " + p.getName());
+        }
+        if(p.hasPermission("tab.prefix.helper")){
+            p.setPlayerListName(ChatColor.LIGHT_PURPLE + "{H} " + p.getName());
+        }
+        if(p.hasPermission("tab.prefix.responsable")){
+            p.setPlayerListName(ChatColor.BLUE + "{R} " + p.getName());
+        }
+        if(p.hasPermission("tab.prefix.builder")){
+            p.setPlayerListName(ChatColor.GOLD + "{B} " + p.getName());
+        }
+
     }
 
     @EventHandler
@@ -57,7 +80,7 @@ public class EventListeners implements Listener {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.BLUE + "Responsable" + ChatColor.DARK_GRAY + "] " + ChatColor.BLUE + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
             //If the player has non of the above permission nodes they will have this Chat format.
         } else if (p.hasPermission("chat.format.builder")) {
-            event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "Builder" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
+            event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.GOLD + "Builder" + ChatColor.DARK_GRAY + "] " + ChatColor.GOLD + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
             //If the player has non of the above permission nodes they will have this Chat format.
         } else {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "UNKNOWN" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);

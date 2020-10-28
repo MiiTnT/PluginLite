@@ -31,3 +31,12 @@ commands:
   rain:
     description: Mettre le mauvais temp
     permission: pluginlite.time.rain
+  craft:
+    description: Ouvrir une table de craft
+    permission: pluginlite.craft
+  furnace:
+    description: Ouvrir un four
+    permission: pluginlite.furnace
+  setservername:
+    description: SerServerName
+    permission: pluginlite.servername

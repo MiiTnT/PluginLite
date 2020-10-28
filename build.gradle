@@ -23,6 +23,6 @@ dependencies {
 }
 
 
-setLibsDirName("C:\\Users\\preve\\Desktop\\pls\\plugins")
+setLibsDirName("C:\\Users\\preve\\Desktop\\Serveurs\\pls\\plugins")
 
 compileJava.options.encoding("UTF-8")
