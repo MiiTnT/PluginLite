@@ -12,7 +12,7 @@ import java.util.Objects;
 public class CommandTime implements CommandExecutor {
     private Pluginlite main;
 
-    public time(Pluginlite pluginlite) {
+    public CommandTime(Pluginlite pluginlite) {
         this.main = pluginlite;
     }
 
