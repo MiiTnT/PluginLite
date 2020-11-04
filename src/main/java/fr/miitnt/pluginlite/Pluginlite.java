@@ -10,22 +10,16 @@ public final class Pluginlite extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         System.out.println("[PluginLite] Le plugin démarre !");
-        PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(new Commandes(this), this);
-        getCommand("gmc").setExecutor(new gamemode1(this));
-        getCommand("gms").setExecutor(new gamemode0(this));
-        getCommand("gma").setExecutor(new gamemode2(this));
-        getCommand("gmsp").setExecutor(new gamemode3(this));
+        getServer().getPluginManager().registerEvents(new PlayersListener(this), this);
         getCommand("litereload").setExecutor(new litereload(this));
         getCommand("day").setExecutor(new day(this));
         getCommand("night").setExecutor(new night(this));
         getCommand("sun").setExecutor(new time(this));
         getCommand("rain").setExecutor(new rain(this));
-        getCommand("gm").setExecutor(new gm(this));
+        getCommand("gm").setExecutor(new CommandGamemode(this));
         getCommand("craft").setExecutor(new craft());
         getCommand("furnace").setExecutor(new furnace(this));
         getCommand("setservername").setExecutor(new setServerName(this));
-        getServer().getPluginManager().registerEvents(new EventListeners(this), this);
 
 
         saveDefaultConfig();
