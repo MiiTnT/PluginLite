@@ -9,10 +9,10 @@ import org.bukkit.command.CommandSender;
 
 import java.util.Objects;
 
-public class day implements CommandExecutor {
-    private final Pluginlite main;
+public class CommandDay implements CommandExecutor {
+    private Pluginlite main;
 
-    public day(Pluginlite pluginlite) {
+    public CommandDay(Pluginlite pluginlite) {
         this.main = pluginlite;
     }
 

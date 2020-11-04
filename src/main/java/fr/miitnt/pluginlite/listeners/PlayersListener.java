@@ -1,26 +1,37 @@
 package fr.miitnt.pluginlite.commands;
 
 import fr.miitnt.pluginlite.Pluginlite;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
-public class EventListeners implements Listener {
+import java.util.Arrays;
+import java.util.List;
+
+
+public class PlayersListener implements Listener {
+
+    private List<String> forbiddenCommands = Arrays.asList("plugins", "pl", "ver", "version", "help", "?");
     private Pluginlite main;
-
-    public EventListeners(Pluginlite pluginlite) {
+    
+    public PlayersListener(Pluginlite pluginlite) {
         this.main = pluginlite;
     }
 
     @EventHandler
+    public void onCommand(PlayerCommandPreprocessEvent e) {
+        Player p = e.getPlayer();
+        if (forbiddenCommands.contains(e.getMessage().toLowerCase().replace("/", "").replaceAll(" ",""))) {
+            p.sendMessage("§cErreur: §7Cette commande a été désactivée par §2[PluginLite]");
+            e.setCancelled(true);
+        }
+    }
+    
+    @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player p = event.getPlayer();
         String message = this.main.getConfig().getString("messages.join_message");
-
         if (message != null)
             event.setJoinMessage(message.replace("{PLAYER}", p.getDisplayName()));
         
@@ -63,28 +74,21 @@ public class EventListeners implements Listener {
         String message = event.getMessage();
         if (p.hasPermission("chat.format.joueur")) {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_GREEN + "Joueur" + ChatColor.DARK_GRAY + "] " + ChatColor.DARK_GREEN + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
-            //This will give the player with that permission node that Chat format.
         } else if (p.hasPermission("chat.format.guerrier")) {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.RED + "Guerrier" + ChatColor.DARK_GRAY + "] " + ChatColor.RED + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
             //This will give the player with that permission node that Chat format.
         } else if (p.hasPermission("chat.format.admin")) {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "Admin" + ChatColor.DARK_GRAY + "] " + ChatColor.DARK_RED + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
-            //This will give the player with that permission node that Chat format.
         } else if (p.hasPermission("chat.format.moderateur")) {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "Modérateur" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
-            //If the player has non of the above permission nodes they will have this Chat format.
         } else if (p.hasPermission("chat.format.helper")) {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.LIGHT_PURPLE + "Helper" + ChatColor.DARK_GRAY + "] " + ChatColor.LIGHT_PURPLE + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
-            //If the player has non of the above permission nodes they will have this Chat format.
         } else if (p.hasPermission("chat.format.responsable")) {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.BLUE + "Responsable" + ChatColor.DARK_GRAY + "] " + ChatColor.BLUE + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
-            //If the player has non of the above permission nodes they will have this Chat format.
         } else if (p.hasPermission("chat.format.builder")) {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.GOLD + "Builder" + ChatColor.DARK_GRAY + "] " + ChatColor.GOLD + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
-            //If the player has non of the above permission nodes they will have this Chat format.
         } else {
             event.setFormat(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "UNKNOWN" + ChatColor.DARK_GRAY + "] " + ChatColor.GRAY + p.getDisplayName() + ChatColor.DARK_GRAY + ": " + ChatColor.WHITE + message);
-            //If the player has non of the above permission nodes they will have this Chat format.
         }
     }
 }

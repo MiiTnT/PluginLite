@@ -9,20 +9,22 @@ import org.bukkit.command.CommandSender;
 
 import java.util.Objects;
 
-public class night implements CommandExecutor {
-    private final Pluginlite main;
+public class CommandTime implements CommandExecutor {
+    private Pluginlite main;
 
-    public night(Pluginlite pluginlite) {
+    public CommandTime(Pluginlite pluginlite) {
         this.main = pluginlite;
     }
+
 
     @Override
     public boolean onCommand(CommandSender sender, final Command cmd, final String msg, final String[] args) {
         for (World world : Bukkit.getServer().getWorlds()) {
-            world.setTime(13000);
+            world.setStorm(false);
+            world.setThundering(false);
 
         }
-        sender.sendMessage(Objects.requireNonNull(main.getConfig().getString("ServerName")) + " " + Objects.requireNonNull(main.getConfig().getString("messages.night")));
+        sender.sendMessage(Objects.requireNonNull(main.getConfig().getString("ServerName")) + " " + Objects.requireNonNull(main.getConfig().getString("messages.sun")));
         return true;
     }
 
