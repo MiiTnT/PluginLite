@@ -55,6 +55,20 @@ public class CommandGamemode implements CommandExecutor {
 					player.sendMessage("§cErreur: §7Vous n'avez pas la permission.");
 				}
 				return true;
+			} else if(msg.startsWith("/gmsp")) {
+				if (player.hasPermission("pluginlite.gamemode.spectator")) {
+					if (args.length == 0) {
+						player.sendMessage(Objects.requireNonNull(main.getConfig().getString("ServerName")) + " "
+								+ Objects.requireNonNull(main.getConfig().getString("messages.gamemode3")));
+						player.setGameMode(GameMode.SPECTATOR);
+						player.setHealth(20F);
+						player.setSaturation(20);
+						player.setFoodLevel(20);
+					}
+				} else {
+					player.sendMessage("§cErreur: §7Vous n'avez pas la permission.");
+				}
+				return true;
 			} else if (msg.startsWith("/gm ")) {
 				String servername = this.main.getConfig().getString("ServerName");
 
@@ -144,6 +158,8 @@ public class CommandGamemode implements CommandExecutor {
 						}
 					}
 				}
+				
+				return true;
 			}
 		}
 
