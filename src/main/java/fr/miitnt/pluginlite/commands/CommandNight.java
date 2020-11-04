@@ -9,10 +9,10 @@ import org.bukkit.command.CommandSender;
 
 import java.util.Objects;
 
-public class night implements CommandExecutor {
+public class CommandNight implements CommandExecutor {
     private final Pluginlite main;
 
-    public night(Pluginlite pluginlite) {
+    public CommandNight(Pluginlite pluginlite) {
         this.main = pluginlite;
     }
 
