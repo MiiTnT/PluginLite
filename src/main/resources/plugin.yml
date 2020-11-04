@@ -6,16 +6,9 @@ authors: [ MiiTnT ]
 description: PluginLite permet de cacher certaines informations au joueurs
 website: www.multiffa.fun
 commands:
-  gmc:
-    description: Simple commande pour changer de gamemode
-  gms:
-    description: Simple commande pour changer de gamemode
-  gma:
-    description: Simple commande pour changer de gamemode
-  gmsp:
-    description: Simple commande pour changer de gamemode
   gm:
     description: Simple commande pour changer de gamemode
+    aliases: [gms, gma, gmc, gmsp]
   litereload:
     description: Reload PluginLite
     permission: pluginlite.time.reload
