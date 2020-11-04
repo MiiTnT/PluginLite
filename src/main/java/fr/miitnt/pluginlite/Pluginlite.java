@@ -11,15 +11,15 @@ public final class Pluginlite extends JavaPlugin {
         // Plugin startup logic
         System.out.println("[PluginLite] Le plugin démarre !");
         getServer().getPluginManager().registerEvents(new PlayersListener(this), this);
-        getCommand("litereload").setExecutor(new litereload(this));
-        getCommand("day").setExecutor(new day(this));
-        getCommand("night").setExecutor(new night(this));
-        getCommand("sun").setExecutor(new time(this));
-        getCommand("rain").setExecutor(new rain(this));
+        getCommand("litereload").setExecutor(new CommandLitereload(this));
+        getCommand("day").setExecutor(new CommandDay(this));
+        getCommand("night").setExecutor(new CommandNight(this));
+        getCommand("sun").setExecutor(new CommandTime(this));
+        getCommand("rain").setExecutor(new CommandRain(this));
         getCommand("gm").setExecutor(new CommandGamemode(this));
-        getCommand("craft").setExecutor(new craft());
-        getCommand("furnace").setExecutor(new furnace(this));
-        getCommand("setservername").setExecutor(new setServerName(this));
+        getCommand("craft").setExecutor(new CommandCraft());
+        getCommand("furnace").setExecutor(new CommandFurnace(this));
+        getCommand("setservername").setExecutor(new CommandSetServerName(this));
 
 
         saveDefaultConfig();
