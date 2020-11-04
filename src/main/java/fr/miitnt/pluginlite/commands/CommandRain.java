@@ -10,9 +10,9 @@ import org.bukkit.command.CommandSender;
 import java.util.Objects;
 
 public class rain implements CommandExecutor {
-    private final Pluginlite main;
+    private Pluginlite main;
 
-    public rain(Pluginlite pluginlite) {
+    public CommandRain(Pluginlite pluginlite) {
         this.main = pluginlite;
     }
 
