@@ -9,8 +9,8 @@ import org.bukkit.command.CommandSender;
 
 import java.util.Objects;
 
-public class time implements CommandExecutor {
-    private final Pluginlite main;
+public class CommandTime implements CommandExecutor {
+    private Pluginlite main;
 
     public time(Pluginlite pluginlite) {
         this.main = pluginlite;
